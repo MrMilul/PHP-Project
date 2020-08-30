@@ -1,0 +1,9 @@
+<?php
+
+function render_page(){
+    include_once ('Templates/header.php');
+    include_once ('Templates/nav.php');
+    get_content();
+    include_once ('Templates/body.php');
+    
+}
