@@ -1,6 +1,8 @@
-<nav id='nav1' class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+
+<nav id='nav1' class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+    <a href="#" class="navbar-brand"><i class="fab fa-php"></i></a>
+    <a href="#" class="navbar-brand"><i class="fab fa-bootstrap"></i></i></a>
           <div class="container">
-               <a href="#" class="navbar-brand"><i class="fab fa-php"></i></a>
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#div1"
                     area-control='div1' area-label='Menu'>
                     <span class="navbar-toggler-icon"></span>

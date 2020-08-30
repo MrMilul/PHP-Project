@@ -4,7 +4,7 @@ function get_title(){
 }
 
 function get_content(){?>
-<div class="bg-dark">
+<div id='contact' class="bg-dark">
      <div class="container py-3" id='Contact_us_form'>
           <h1>CONTACT</h1>
 
