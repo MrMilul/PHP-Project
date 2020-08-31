@@ -17,10 +17,10 @@ function get_content(){?>
                     <div class="modal-body">
                          <form action="">
                               <div class="form-group">
-                                   <input type="text" class='form-control' placeholder='Username' required>
+                                   <input name='username' type="text" class='form-control' placeholder='Username' required>
                               </div>
                               <div class="form-group">
-                                   <input type="password" class='form-control' placeholder='Password' required>
+                                   <input  name='password' type="password" class='form-control' placeholder='Password' required>
                               </div>
                               <div class="form-group form-check">
                                    <input type="checkbox" class='from-check-input' id='chk'>
