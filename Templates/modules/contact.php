@@ -1,6 +1,6 @@
 <?php
 function get_title(){
-    return "dashbord";
+    return "Contact";
 }
 
 function get_content(){?>

@@ -1,8 +1,8 @@
 <?php
 
 function get_title(){
-    return "home";
-};
+    return "Home";
+}
 
 function get_content (){
     ?>

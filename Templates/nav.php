@@ -10,11 +10,11 @@
                <div class="collapse navbar-collapse justify-content-start" id='div1'>
                     <ul class="navbar-nav mr-auto">
                          <li class="nav-item active">
-                              <a href="#" class="nav-link">Home</a>
+                              <a href="home" class="nav-link">Home</a>
                          </li>
-                         <li class="nav-item"><a href="#" class="nav-link ">Contact Us</a></li>
+                         <li class="nav-item"><a href="contact" class="nav-link ">Contact Us</a></li>
                    
-                         <li id='login' class="nav-item"><a href="#" class="nav-link" data-toggle='modal' data-target='#mymodal'>Login</a></li>
+                         <li id='login' class="nav-item"><a href="login" >Login</a></li>
                     </ul>
                </div>
           </div>
