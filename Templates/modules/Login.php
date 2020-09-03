@@ -9,7 +9,7 @@ function get_content(){?>
 <div class="card text-center">
   <div class="card-header text-primary font-bold">Login</div>
   <div class="card-body">
-    <form action="" >
+      <form action="" method="post" >
             <div class="form-group">
                  <input name='username' type="text" class='form-control' placeholder='Username' required>
             </div>
@@ -22,7 +22,7 @@ function get_content(){?>
 
             </div>
             <div class="form-group">
-                 <button type='submit' class='btn btn-primary btn-block'>Login</button>
+                 <button type='submit' name='login' class='btn btn-primary btn-block'>Login</button>
             </div>
     </form>
     
@@ -34,3 +34,18 @@ function get_content(){?>
 </div>
     </div>
 <?php }
+
+function proccess(){
+    if(!isset($_POST)){
+        return;
+    }
+    if(isset($_POST['username'])){
+        $username = $_POST['username']; 
+    }
+    if(isset($_POST['password'])){
+        $password = $_POST['password']; 
+    }
+//    if(empty($username)){
+//        message('Pleae Fill the Username ');
+//    }
+}
