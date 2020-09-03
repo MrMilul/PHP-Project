@@ -72,14 +72,3 @@ function delete_user($username){
 
 
 
-
-
-//$userdata = [
-//    'username' => 'user2',
-//    'password' => '12345',
-//    'email' => 'kanikoliji@yahoo.com',
-//    'firstname' => 'kani',
-//    'lastname' => 'koliji',
-//];
-
-delete_user('user2');
