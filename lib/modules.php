@@ -1,7 +1,9 @@
 <?php
 
 function render_page(){
-     
+//    if(function_exists('proccess')){
+//         return proccess();
+//     }
     include_once ('Templates/header.php');
    include_once ('Templates/nav.php');
   
