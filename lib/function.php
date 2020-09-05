@@ -1,7 +1,11 @@
 <?php
 
-function home_url(){
-    return "/home"; 
+
+function home_url($path = null) {
+    if(!$path || $path == '/') {
+        return PAGE_URL;
+    }
+    return PAGE_URL . $path;
 }
 
 function requested_url(){
@@ -11,7 +15,7 @@ function requested_url(){
         $request_ulr = substr($_SERVER ["REDIRECT_URL"],strpos($_SERVER ["REDIRECT_URL"], '/', 1)+1);
         
     }else{
-        $request_ulr = home_url();
+        $request_ulr = 'index';
       }
     
    return $request_ulr;
