@@ -53,5 +53,7 @@ function proccess(){
     
     if(!is_user_loged_in()){
         message('Incorect Password Or Username', "primary"); 
+    }else{
+        redirect_to(home_url('/home'));
     }
 }
