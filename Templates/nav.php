@@ -14,7 +14,16 @@
                          </li>
                          <li class="nav-item"><a href="contact" class="nav-link ">Contact Us</a></li>
                    
-                         <li id='login' class="nav-item"><a href="login" >Login</a></li>
+                         <li id='login' class="nav-item">
+                             <?php if(!is_user_loged_in()):?>
+                             <a href="login" class="nav-link" >Login</a>
+                             <?php else:?>
+                             <a href="dashboard"  class="nav-link">Dashboard</a>
+                             <?php endif;?>
+                         </li>
+                         <?php if (is_user_loged_in()): ?>
+                         <li class="nav-item"><a href="logout" class="nav-link ">Logout</a></li>
+                         <?php endif;?>
                     </ul>
                </div>
           </div>
