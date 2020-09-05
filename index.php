@@ -1,8 +1,9 @@
 <?php
 include_once 'config.php';
 
-load_page();
+check_previous_login();
 
+load_page();
 
 
 
