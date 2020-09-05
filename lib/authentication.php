@@ -83,7 +83,7 @@ function user_login($username, $password){
     
     $userdata = get_user($username);
     if($username !== $userdata['username'] && sha1($password) !== $userdata['password']){
-        return false;
+        return;
     }
     global $current_user;
     global $current_user_id;
