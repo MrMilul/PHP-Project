@@ -42,10 +42,16 @@ function proccess(){
     if(isset($_POST['username'])){
         $username = $_POST['username']; 
     }
-    if(isset($_POST['password'])){
-        $password = $_POST['password']; 
+    if(empty($username)){
+        return;
     }
-//    if(empty($username)){
-//        message('Pleae Fill the Username ');
-//    }
+    if(isset($_POST['password'])){
+        $password = sha1($_POST['password']);
+    }
+    
+    user_login($username, $password);
+    
+    if(!is_user_loged_in()){
+        message('Incorect Password Or Username', "primary"); 
+    }
 }
