@@ -32,14 +32,41 @@ function clear_user_session(){
     unset($_SESSION['id']);
 }
 
-//function check_previous_login(){
-//    $last_access = $_SESSION['last_access'];
-//    if(time()- $last_access > SESSION_EXPIRE_TIME){
-//        clear_user_session();
-//        return;
-//    }
-//    
-//}
+function check_previous_login() {
+    
+    $last_access = 0;
+    if(isset($_SESSION['last_access'])) {
+        $last_access = $_SESSION['last_access'];
+    }
+    $expired = ((time() - $last_access) > SESSION_EXPIRE_TIME);
+    if($expired) {
+        clear_user_session();
+        return;
+    }
+    
+    $username = $_SESSION['username'];
+    
+    $user = get_user($username);
+    if($user) {
+        $user_id = $_SESSION['id'];
+        if($user_id != $user['id']) {
+            clear_user_session();
+            return;
+        }
+        
+        $password = $_SESSION['password'];
+        if($password != $user['password']) {
+            clear_user_session();
+            return;
+        }
+        
+        global $current_user;
+        global $current_user_id;
+        
+        $current_user = $user;
+        $current_user_id = $user['id'];
+    }
+}
 
 
 function user_logout(){
