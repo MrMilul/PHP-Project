@@ -31,10 +31,11 @@ function user_exist($username){
 }
 
 function add_user($userdata){
-    $username = $userdata['username']; 
-    if(!$username){
+     
+    if(!$userdata){
         return;
     }
+    $username = $userdata['username'];
     $password = sha1($userdata['password']);
     $email = ($userdata['email']);
     $firstname = ($userdata['firstname']);
