@@ -28,11 +28,13 @@ function redirect_to($url){
 }
 
 function message($message, $color='danger'){?>
-    <div class="alert alert-<?php echo $color?> alert-dismissible fade show" role="alert">
-        <strong><?php echo "$message"?></strong>
-    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-        <span aria-hidden="true">&times;</span>
-    </button>
+    <div class='container'>
+        <div class="alert alert-<?php echo $color?> alert-dismissible fade show" role="alert">
+            <strong><?php echo "$message"?></strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
     </div>
 <?php }
 
