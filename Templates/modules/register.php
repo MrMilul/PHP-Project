@@ -49,13 +49,15 @@ function get_title(){
      }
      if (isset($_POST['username'])){
          $userdata['username'] = $_POST['username'];
-         if (user_exist($userdata['username'])){
+         $username = $_POST['username'];
+         if (user_exist($username)){
          message('You already registered!', 'warning');
          return; 
      }
      }
      if (isset($_POST['password'])){
          $userdata['password'] = $_POST['password'];
+         $password = $_POST['password'];
      }
      if (isset($_POST['email'])){
          $userdata['email'] = $_POST['email'];
@@ -66,9 +68,15 @@ function get_title(){
      user_logout();
      
      add_user($userdata);
-      
+     
+      if(empty($username)){
+          return;
+      }
+     
+     user_login($username, $password);
+     
+     if(is_user_loged_in()){
+         redirect_to(home_url());
+     }
  }
- 
- 
- 
  
