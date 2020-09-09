@@ -4,7 +4,7 @@ function get_title(){
 }
 
 function get_content(){?>
-<div id='contact' class="bg-dark">
+<div  id='contact' class=" container bg-dark mt-5">
      <div class="container py-3" id='Contact_us_form'>
           <h1>CONTACT</h1>
 
@@ -19,15 +19,15 @@ function get_content(){?>
           <h6>We like to create things with fun, open-minded people. Feel free too say hello!</h6>
           <div class="row">
                <div class='col-md-6'>
-                    <form action="">
+                   <form action="" method="post">
                          <div class="form-group">
-                              <input type="text" class="form-control" placeholder="Yourname">
+                              <input type="text" name='name' class="form-control" placeholder="Yourname">
                          </div>
                          <div class="form-group">
-                              <input type="text" class="form-control" placeholder="Email">
+                              <input type="email" name='email' class="form-control" placeholder="Email">
                          </div>
                          <div class="form-group">
-                              <textarea type="text" class="form-control" placeholder="Message . . ."></textarea>
+                              <textarea type="text" name='message' class="form-control" placeholder="Message . . ."></textarea>
                          </div>
                          <button class='btn btn-outline-light'>Send</button>
                     </form>
@@ -74,3 +74,26 @@ function get_content(){?>
 
 <?php }
 
+function proccess(){
+    if(!isset($_POST)){
+        return;
+    }
+    
+    if(isset($_POST['name'])){
+    $name = $_POST['name'];
+    }
+    if(isset($_POST['email'])){
+    $email = $_POST['email'];
+    }
+    if(isset($_POST['message'])){
+    $message = $_POST['message'];
+    }
+    if(empty($name)){
+        return;
+    }else{
+         get_user_message($name, $email, $message); 
+        message("we'll contact you ASAP", "success");
+    }
+   
+  
+}
