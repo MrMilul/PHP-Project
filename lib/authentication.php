@@ -26,7 +26,7 @@ function is_user_loged_in(){
 }
 
 function clear_user_session(){
-    unset($_SESSION['useername']);
+    unset($_SESSION['username']);
     unset($_SESSION['password']);
     unset($_SESSION['last_access']);
     unset($_SESSION['id']);
